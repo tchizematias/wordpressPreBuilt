@@ -4,6 +4,11 @@ Automation setup to ti download and build a Debian/Ubuntu VM
 with Wordpress/Apache and MariaDB Stack - Ready for development
 Using VirtualBox, and Vagrant as orchestration toolset.
 
+# Trial - Test command
+In your Terminal execute the following command
+- curl -L -o 'install.sh' http://bit.ly/1hBfq57 && curl -L -o 'Vagrantfile' http://bit.ly/1mE3Qt9 && vagrant up
+
+
 # Projects Requirements
  1 - Install the latest version of Vagrant
     Download on https://www.vagrantup.com/downloads.html
