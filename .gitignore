@@ -1,0 +1,4 @@
+#Ignore all the components mention on this file
+
+.idea
+.vagrant
