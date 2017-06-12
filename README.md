@@ -14,5 +14,7 @@ Using VirtualBox, and Vagrant as orchestration toolset.
  3 - The install script only runs on with APT package manager not YUM or RPM
  4 - Prior to execute the script edit the IP address on install script
 
-#
+# Installation Steps
+
+
 
