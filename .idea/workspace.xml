@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2f9e1ed-58ae-4c0d-b6cd-6b4c59ff50ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vagrantfile" afterPath="$PROJECT_DIR$/Vagrantfile" />
-    </list>
+    <list default="true" id="c2f9e1ed-58ae-4c0d-b6cd-6b4c59ff50ca" name="Default" comment="Create a user guide for the project, change the IP address on Install file and add meta" />
     <ignored path="wordpressDev02.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -282,6 +279,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create a user guide for the project" />
+    <MESSAGE value="Create a user guide for the project, change the IP address on Install file and add meta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create a user guide for the project, change the IP address on Install file and add meta" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
