@@ -6,7 +6,7 @@ Using VirtualBox, and Vagrant as orchestration toolset.
 
 # Trial - Test command
 In your Terminal execute the following command
-- curl -L -o 'install.sh' http://bit.ly/1hBfq57 && curl -L -o 'Vagrantfile' http://bit.ly/1mE3Qt9 && vagrant up
+- curl -L -o 'install.sh' https://goo.gl/pgvE6P && curl -L -o 'Vagrantfile' https://goo.gl/LWnhP5 && vagrant up
 
 
 # Projects Requirements
