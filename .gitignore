@@ -1,4 +1,5 @@
-#Ignore all the components mention on this file
+# Ignore all the components mention on this file just all wchich is not part
+# Of the project
 
 .idea
 .vagrant
