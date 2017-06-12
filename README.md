@@ -5,8 +5,8 @@ with Wordpress/Apache and MariaDB Stack - Ready for development
 Using VirtualBox, and Vagrant as orchestration toolset.
 
 # Trial - Test command
-In your Terminal execute the following command
-- curl -L -o 'install.sh' https://goo.gl/pgvE6P && curl -L -o 'Vagrantfile' https://goo.gl/LWnhP5 && vagrant up
+- In your Terminal execute the following command
+```curl -L -o 'install.sh' https://goo.gl/pgvE6P && curl -L -o 'Vagrantfile' https://goo.gl/LWnhP5 && vagrant up```
 
 
 # Projects Requirements
