@@ -10,7 +10,7 @@
 ### Setup Variables
 
 # The version of Ruby to be installed supporting the Chef and Puppet gems
-ruby_ver="1.8.7-p358"
+ruby_ver="2.4.1"
 
 # The base path to the Ruby used for the Chef and Puppet gems
 ruby_home="/opt/vagrant_ruby"
