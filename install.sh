@@ -8,7 +8,7 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again p
 
 # Install all pre-dependencies
 sudo apt-get install -y vim curl lynx screen nmap 
-sudo apt-get install -y python3 python3-pipy python-software-properties
+sudo apt-get install -y python3 python3-pip python-software-properties
 sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev
 
 # Add Ondrej Repository with PHP5
