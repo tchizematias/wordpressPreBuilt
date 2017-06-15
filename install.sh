@@ -1,8 +1,7 @@
 #!/bin/bash
 
-#Update your systems
+#Update your systems DO NOT Upgrade at this stage
 sudo apt-get update
-sudo apt-get upgrade -y
 
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
