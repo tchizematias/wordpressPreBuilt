@@ -7,7 +7,7 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password passwor
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 
 # Install all pre-dependencies
-sudo apt-get install -y vim curl lynx screen nmap tree 
+sudo apt-get install -y vim curl lynx screen nmap tree wget
 sudo apt-get install -y python3 python3-pip python-software-properties
 sudo apt-get install -y build-essential libssl-dev libffi-dev python-dev
 
