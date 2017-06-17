@@ -5,3 +5,5 @@
 *.vagrant
 *.idea/*
 #src/wordpress-Install-with-Nginx.sh
+html
+html/*

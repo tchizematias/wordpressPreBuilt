@@ -14,28 +14,28 @@ ping -c1 8.8.8.8  &> /dev/null
         if [ $? == 0 ]
         then
         {
-           echo "---------------------------------------------------------------------------------------------------------"
-           echo "----------------------------PART 1 STARTED---------------------------------------------------------------"
-	   echo "-----------------------------Domain Setup----------------------------------------------------------------"
+           #echo "---------------------------------------------------------------------------------------------------------"
+           #echo "----------------------------PART 1 STARTED---------------------------------------------------------------"
+	   #echo "-----------------------------Domain Setup----------------------------------------------------------------"
 	   #add the packages name that you want to install or check in below array
            #read  -p  "Enter the Domain Name (for example rupin.com)"
-           dname=($HOSTNAME)
-           IP="127.0.0.1"
-           sudo -- sh -c -e "echo '$IP $dname' >> /etc/hosts";
-          if [ -z $dname ]; then
-          {
-            echo -e "\e[1;31mNo domain name given\e[0m"
-            exit 1
-          }
-          fi
-         PATTERN="^([[:alnum:]]([[:alnum:]\-]{0,61}[[:alnum:]])?\.)+[[:alpha:]]{2,6}$"
-          if [[ "$dname" =~ $PATTERN ]]; then
-          DOMAIN=`echo $dname | tr '[A-Z]' '[a-z]'`
-          echo "Creating hosting for:" $dname
-          else
-           echo -e "\e[1;31minvalid domain name\e[0m"
-           exit 1
-           fi
+           #dname=($HOSTNAME)
+           #IP="127.0.0.1"
+           #sudo -- sh -c -e "echo '$IP $dname' >> /etc/hosts";
+          #if [ -z $dname ]; then
+          #{
+          #  echo -e "\e[1;31mNo domain name given\e[0m"
+          #  exit 1
+          #}
+          #fi
+         #PATTERN="^([[:alnum:]]([[:alnum:]\-]{0,61}[[:alnum:]])?\.)+[[:alpha:]]{2,6}$"
+          #if [[ "$dname" =~ $PATTERN ]]; then
+          #DOMAIN=`echo $dname | tr '[A-Z]' '[a-z]'`
+          #echo "Creating hosting for:" $dname
+          #else
+           #echo -e "\e[1;31minvalid domain name\e[0m"
+           #exit 1
+           #fi
           echo "-----------------------PART 1 completed succesfully--------------------------------------------------------"
           echo "-----------------------------------------------------------------------------------------------------------"
 
@@ -234,7 +234,7 @@ server {
         location ~ \.php$ {
                 try_files \$uri =404;
                 fastcgi_split_path_info ^(.+\.php)(/.+)$;
-                fastcgi_pass unix:/var/run/php5-fpm.sock;
+                fastcgi_pass unix:/var/run/php5.6-fpm.sock;
                 fastcgi_index index.php;
                 include fastcgi_params;
         }
@@ -256,16 +256,16 @@ sudo service nginx restart  >> /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup
          exit
        }
       fi
-sudo service php5-fpm restart >> /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup-error.log
+sudo service php5.6-fpm restart >> /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup-error.log
  if [ $? == 0 ]
        then
         {
-         echo -e "-----------\e[32mphp5-fpm was succesfully restarted\e[0m--------------------------------------------"
+         echo -e "-----------\e[32mphp5.6-fpm was succesfully restarted\e[0m--------------------------------------------"
          echo "-------------------------------------------------------------------------------------------------------"
         }
       else
        {
-         echo -e "\e[1;31m--There was problem while restarting ph5-fpm please check log /tmp/wordpress-setup-error.log-------\e[0m"
+         echo -e "\e[1;31m--There was problem while restarting ph5.6-fpm please check log /tmp/wordpress-setup-error.log-------\e[0m"
          exit
        }
       fi
