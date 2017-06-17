@@ -54,7 +54,7 @@ if [ "$key" = '' ]; then
 	   echo "-----------------------------Lets start with Installaton--------------------------------------------------"
  	   read  -s -p "Enter the password for the Database" dbpass
 	   #add the packages name that you want to install or check in below array 
-	   package=( mysql-server nginx php5.6-fpm php5.6-mysql php5.6-gd libssh2-php) 
+	   package=( mysql-server nginx php5-fpm php5.6-mysql php5.6-gd libssh2-php) 
 	   for var in "${package[@]}"
            do
 	    dpkg-query -W "${var}" > /tmp/wordpress-install.log 2> /tmp/wordpress-install-error.log
