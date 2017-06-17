@@ -19,7 +19,7 @@ ping -c1 8.8.8.8  &> /dev/null
 	   echo "-----------------------------Domain Setup----------------------------------------------------------------"
 	   #add the packages name that you want to install or check in below array
            #read  -p  "Enter the Domain Name (for example rupin.com)"
-           dname=($hostname)
+           dname=(localhost)
            IP="127.0.0.1"
            sudo -- sh -c -e "echo '$IP $dname' >> /etc/hosts";
           if [ -z $dname ]; then
