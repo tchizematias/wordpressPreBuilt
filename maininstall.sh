@@ -36,8 +36,8 @@ ping -c1 8.8.8.8  &> /dev/null
            #echo -e "\e[1;31minvalid domain name\e[0m"
            #exit 1
            #fi
-          echo "-----------------------PART 1 completed succesfully--------------------------------------------------------"
-          echo "-----------------------------------------------------------------------------------------------------------"
+          #echo "-----------------------PART 1 completed succesfully--------------------------------------------------------"
+          #echo "-----------------------------------------------------------------------------------------------------------"
 
 # Add Ondrej Repository with PHP5
 sudo add-apt-repository -y ppa:ondrej/php
@@ -48,7 +48,7 @@ echo "--------------------------------------------------------------------------
 	   echo "-----------------------------Lets start with Installaton--------------------------------------------------"
  	   dbpass=(root)
 	   #add the packages name that you want to install or check in below array
-	   package=( mysql-server nginx php5.6 php5.6-curl php5.6-mcrypt php5.6-readline git-core php5.6-xdebug php5.6-fpm php5.6-mysql php5.6-gd libssh2-php vim curl lynx screen nmap tree wget python3 python3-pip python-software-properties build-essential libssl-dev libffi-dev python-dev)
+	   package=( mysql-server nginx php5.6 php5.6-curl php5.6-mcrypt php5.6-readline git-core php5.6-xdebug php5-fpm php5.6-mysql php5.6-gd libssh2-php vim curl lynx screen nmap tree wget python3 python3-pip python-software-properties build-essential libssl-dev libffi-dev python-dev)
 	   for var in "${package[@]}"
            do
 	    dpkg-query -W "${var}" > /tmp/wordpress-install.log 2> /tmp/wordpress-install-error.log
@@ -234,7 +234,7 @@ server {
         location ~ \.php$ {
                 try_files \$uri =404;
                 fastcgi_split_path_info ^(.+\.php)(/.+)$;
-                fastcgi_pass unix:/var/run/php5.6-fpm.sock;
+                fastcgi_pass unix:/var/run/php5-fpm.sock;
                 fastcgi_index index.php;
                 include fastcgi_params;
         }
@@ -256,11 +256,11 @@ sudo service nginx restart  >> /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup
          exit
        }
       fi
-sudo service php5.6-fpm restart >> /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup-error.log
+sudo service php5-fpm restart >> /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup-error.log
  if [ $? == 0 ]
        then
         {
-         echo -e "-----------\e[32mphp5.6-fpm was succesfully restarted\e[0m--------------------------------------------"
+         echo -e "-----------\e[32mphp5-fpm was succesfully restarted\e[0m--------------------------------------------"
          echo "-------------------------------------------------------------------------------------------------------"
         }
       else
