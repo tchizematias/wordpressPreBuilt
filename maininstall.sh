@@ -276,3 +276,13 @@ echo "--------------------------------------------------------------------------
 echo -e "-----------------OPEN THE BROWSER AND TYPE  \e[36mhttp://$dname/wp-admin/install.php\e[0m---------------------"
 echo -e "-----------------Make sure that ANY OTHER WEB SERVER IS NOT LISTENING ON PORT 80------------------------------"
 echo "-----------------------------------------------------------------------------------------------------------------"
+
+        }
+        else
+        {
+         echo -e "\e[1;31m---------can't update the source list--------\e[0m"
+         exit 1
+        }
+       fi
+     }
+     fi
