@@ -6,7 +6,7 @@ Using VirtualBox, and Vagrant as orchestration toolset.
 
 # Trial - Test command
 - In your Terminal execute the following command
-```curl -L -o 'install.sh' https://goo.gl/pgvE6P && curl -L -o 'Vagrantfile' https://goo.gl/LWnhP5 && vagrant up```
+```curl -L -o 'install.sh' https://goo.gl/GLfUWR && curl -L -o 'Vagrantfile' https://goo.gl/mL6orp && vagrant up```
 
 ##Downloading the Script directly from Github.com created a html file instead of Bash
 ##As intended, there necessary to create a gitgeast and make the source available to 
