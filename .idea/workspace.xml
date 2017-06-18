@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c2f9e1ed-58ae-4c0d-b6cd-6b4c59ff50ca" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vagrantfile" afterPath="$PROJECT_DIR$/Vagrantfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maininstall.sh" afterPath="$PROJECT_DIR$/maininstall.sh" />
     </list>
     <ignored path="wordpressDev02.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,8 +22,8 @@
       <file leaf-file-name="maininstall.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/maininstall.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+            <state relative-caret-position="188">
+              <caret line="92" column="42" lean-forward="false" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -543,7 +541,21 @@
       <option name="project" value="LOCAL" />
       <updated>1497731327178</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Resolve $HOSTNAME error - Make it as html">
+      <created>1497785806344</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1497785806344</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Resolve $HOSTNAME error - Make it as html">
+      <created>1497788044457</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1497788044457</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -556,7 +568,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283582" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1981402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -618,7 +630,8 @@
     <MESSAGE value="Editing this line and adding a comma" />
     <MESSAGE value="Correcting the Domain name declaration error" />
     <MESSAGE value="Resolve $HOSTNAME error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolve $HOSTNAME error" />
+    <MESSAGE value="Resolve $HOSTNAME error - Make it as html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolve $HOSTNAME error - Make it as html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -812,8 +825,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/maininstall.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        <state relative-caret-position="188">
+          <caret line="92" column="42" lean-forward="false" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="42" />
           <folding />
         </state>
       </provider>
