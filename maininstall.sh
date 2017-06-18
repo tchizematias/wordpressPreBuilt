@@ -14,7 +14,7 @@ ping -c1 8.8.8.8  &> /dev/null
         if [ $? == 0 ]
         then
         {
-        dname=($HOSTNAME)
+        dname=$(sed -E 's/^((ftp|www)\.)?([^.]*)\..*/\3/' <<< "$HOSTNAME")
         IP="127.0.0.1"
         sudo -- sh -c -e "echo '$IP $dname' >> /etc/hosts";
 
