@@ -14,30 +14,6 @@ ping -c1 8.8.8.8  &> /dev/null
         if [ $? == 0 ]
         then
         {
-           #echo "---------------------------------------------------------------------------------------------------------"
-           #echo "----------------------------PART 1 STARTED---------------------------------------------------------------"
-	   #echo "-----------------------------Domain Setup----------------------------------------------------------------"
-	   #add the packages name that you want to install or check in below array
-           #read  -p  "Enter the Domain Name (for example rupin.com)"
-           #dname=($HOSTNAME)
-           #IP="127.0.0.1"
-           #sudo -- sh -c -e "echo '$IP $dname' >> /etc/hosts";
-          #if [ -z $dname ]; then
-          #{
-          #  echo -e "\e[1;31mNo domain name given\e[0m"
-          #  exit 1
-          #}
-          #fi
-         #PATTERN="^([[:alnum:]]([[:alnum:]\-]{0,61}[[:alnum:]])?\.)+[[:alpha:]]{2,6}$"
-          #if [[ "$dname" =~ $PATTERN ]]; then
-          #DOMAIN=`echo $dname | tr '[A-Z]' '[a-z]'`
-          #echo "Creating hosting for:" $dname
-          #else
-           #echo -e "\e[1;31minvalid domain name\e[0m"
-           #exit 1
-           #fi
-          #echo "-----------------------PART 1 completed succesfully--------------------------------------------------------"
-          #echo "-----------------------------------------------------------------------------------------------------------"
 
 # Add Ondrej Repository with PHP5
 sudo add-apt-repository -y ppa:ondrej/php
