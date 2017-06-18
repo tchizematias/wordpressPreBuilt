@@ -14,8 +14,7 @@ ping -c1 8.8.8.8  &> /dev/null
         if [ $? == 0 ]
         then
         {
-        #dname=$(sed -E 's/^((ftp|www)\.)?([^.]*)\..*/\3/' <<< "$HOSTNAME")
-        dname=(html)
+        dname=$(sed -E 's/^((ftp|www)\.)?([^.]*)\..*/\3/' <<< "$HOSTNAME")
         IP="127.0.0.1"
         sudo -- sh -c -e "echo '$IP $dname' >> /etc/hosts";
 
@@ -202,18 +201,19 @@ sed -i "s/disable_functions = .*/disable_functions = /" /etc/php5.6/cli/php.ini
 echo "----------------------------PART 5 Setup of NGINX--------------------------------------------------------------------"
 echo "--------------------Nginx Configurations-----------------------------------------------------------------------------"
 cd ..
-sudo mkdir -p /var/www/$dname
-sudo cp  -r wordpress/* /var/www/$dname/
-sudo chown -R www-data:www-data /var/www/$dname /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup-error.log
-sudo chmod -R 755 /var/www/$dname /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup-error.log
+hostpath=(html)
+sudo mkdir -p /var/www/$hostpath
+sudo cp  -r wordpress/* /var/www/$hostpath/
+sudo chown -R www-data:www-data /var/www/$hostpath /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup-error.log
+sudo chmod -R 755 /var/www/$hostpath /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup-error.log
 (
 cat <<EOF
 server {
         listen 80 default_server;
         listen [::]:80 default_server ipv6only=on;
-        root /var/www/$dname;
+        root /var/www/$hostpath;
         index index.php index.html index.htm;
-        server_name $dname;
+        server_name $hostpath;
         location / {
                 # try_files \$uri \$uri/ =404;
                 try_files \$uri \$uri/ /index.php?q=\$uri&\$args;
@@ -232,9 +232,9 @@ server {
         }
 }
 EOF
-) >  /etc/nginx/sites-available/$dname.conf
+) >  /etc/nginx/sites-available/$hostpath.conf
 
-sudo ln -s /etc/nginx/sites-available/$dname.conf /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/$hostpath.conf /etc/nginx/sites-enabled/
 sudo service nginx restart  >> /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup-error.log
  if [ $? == 0 ]
        then
@@ -265,7 +265,7 @@ sudo service php5-fpm restart >> /tmp/wordpress-setup.log 2>> /tmp/wordpress-set
  sudo rm -rf latest.tar.gz
 echo "-----------------------------------------PART 5 Completed succesfully--------------------------------------------"
 echo "-----------------------------------------------------------------------------------------------------------------"
-echo -e "-----------------OPEN THE BROWSER AND TYPE  \e[36mhttp://$dname/wp-admin/install.php\e[0m---------------------"
+echo -e "-----------------OPEN THE BROWSER AND TYPE  \e[36mhttp://$hostpath/wp-admin/install.php\e[0m---------------------"
 echo -e "-----------------Make sure that ANY OTHER WEB SERVER IS NOT LISTENING ON PORT 80------------------------------"
 echo "-----------------------------------------------------------------------------------------------------------------"
 
