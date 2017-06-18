@@ -14,6 +14,9 @@ ping -c1 8.8.8.8  &> /dev/null
         if [ $? == 0 ]
         then
         {
+        dname=($HOSTNAME)
+        IP="127.0.0.1"
+        sudo -- sh -c -e "echo '$IP $dname' >> /etc/hosts";
 
 # Add Ondrej Repository with PHP5
 sudo add-apt-repository -y ppa:ondrej/php
@@ -176,6 +179,18 @@ cp wp-config-sample.php wp-config.php >> /tmp/wordpress-setup.log 2>> /tmp/wordp
 perl -pi -e "s/database_name_here/$DBNAME/g" wp-config.php >> /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup-error.log
 perl -pi -e "s/username_here/$DBUSER/g" wp-config.php >> /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup-error.log
 perl -pi -e "s/password_here/$DBPASSWD/g" wp-config.php >> /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup-error.log
+
+#set WP salts
+perl -i -pe'
+  BEGIN {
+    @chars = ("a" .. "z", "A" .. "Z", 0 .. 9);
+    push @chars, split //, "!@#$%^&*()-_ []{}<>~\`+=,.;:/?|";
+    sub salt { join "", map $chars[ rand @chars ], 1 .. 64 }
+  }
+  s/put your unique phrase here/salt()/ge
+' wp-config.php >> /tmp/wordpress-setup.log 2>> /tmp/wordpress-setup-error.log
+
+
 echo "----------------------------PART 4 Completed Successfully------------------------------------------------------------"
 echo "---------------------------------------------------------------------------------------------------------------------"
 
